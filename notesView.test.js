@@ -179,7 +179,7 @@ describe('NotesView', () => {
     
     await button.click()
     await new Promise(resolve => setTimeout(resolve, 0));
-
+    
     expect(mockClient.createNote.mock.calls.length).toEqual(1); 
     expect(form.value).toEqual('') 
     expect(mockClient.createNote.mock.results[0].value.status).toEqual(204); 
